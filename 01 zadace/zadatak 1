@@ -1,0 +1,5 @@
+function conversion(c){
+    console.log(c/7.5);
+}
+
+conversion(75);
