@@ -1,0 +1,16 @@
+function vrijeme(t){
+    var sat = 0
+    var min = 0
+
+    while(t >= 60){
+        sat += 1;
+        t -= 60
+
+            if(t < 60){
+                min += t;
+            }
+    }
+    console.log("sati:", sat, " min:", min);
+}
+
+vrijeme(139)
