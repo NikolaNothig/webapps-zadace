@@ -1,16 +1,29 @@
+
+
 const obj1 = {a:1, b:2, c:3}
-const obj2 = {d:321, e:3, f:1}
+const obj2 = {d:321, e:3, c:1}
+//klucevi promjenjeni radi testiranja (ako se pronade iti jedan zajednicki kljuc, funkcija vraca true)
 
 const jednako = (obj1, obj2) => {
     const obj1keys = Object.keys(obj1);
     const obj2keys = Object.keys(obj2);
 
-    for (let objkey of obj1keys) {
-        if(obj1[objkey] !== obj2[objkey]){
-        return false
+    for (let objkey1 of obj1keys) {
+        for (let objkey2 of obj2keys) {
+        if(objkey1 === objkey2){
+        return true
+     }
     }
 }
-return true
+return false
 }
 
-jednako(obj1,obj2);
+jednako(obj1,obj2)
+
+//testiranje koda
+
+if (jednako(obj1,obj2))
+console.log("true");
+else console.log("false");
+
+
